@@ -9,3 +9,8 @@ GET http://127.0.0.1:8000/hello/User
 Accept: application/json
 
 ###
+
+GET http://127.0.0.1:8000/mail/test?email=806797785@qq.com
+
+###
+GET http://127.0.0.1:8000/auth/code?email=806797785@qq.com
