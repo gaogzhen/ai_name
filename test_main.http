@@ -12,5 +12,26 @@ Accept: application/json
 
 GET http://127.0.0.1:8000/mail/test?email=806797785@qq.com
 
-###
+### 发送邮箱验证码
 GET http://127.0.0.1:8000/auth/code?email=806797785@qq.com
+
+### 用户注册
+POST http://127.0.0.1:8000/auth/register
+Content-Type: application/json
+
+{
+  "email": "806797785@qq.com",
+  "username": "gaogzhen",
+  "password": "123456",
+  "confirm_password": "123456",
+  "code": "6818"
+}
+
+### 用户登陆
+POST http://127.0.0.1:8000/auth/login
+Content-Type: application/json
+
+{
+    "email": "806797785@qq.com",
+    "password": "123456"
+}

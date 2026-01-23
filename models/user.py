@@ -15,8 +15,9 @@ class User(Base):
     username: Mapped[String] = mapped_column(String(100))
     _password: Mapped[String] = mapped_column(String(200))
 
-    def __init__(self, email, username, password):
-        super().__init__(email, username)
+    def __init__(self, *args, **kwargs):
+        password = kwargs.pop('password')
+        super().__init__(*args, **kwargs)
         if password:
             self.password = password
 
