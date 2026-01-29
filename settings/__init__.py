@@ -1,5 +1,8 @@
 import os
 from datetime import timedelta
+from dotenv import  load_dotenv
+
+load_dotenv()
 
 # 数据库相关配置
 DB_URI = "mysql+aiomysql://root:mysql8#Fastapi@localhost:3306/ai_name?charset=utf8mb4"
@@ -17,3 +20,8 @@ MAIL_SSL_TLS = False
 JWT_SECRET_KEY = os.environ.get("JWT_SECRET_KEY")
 JWT_ACCESS_TOKEN_EXPIRES = timedelta(days=15)
 JWT_REFRESH_TOKEN_EXPIRES = timedelta(days=30)
+
+# 大模型配置
+CLOSEAI_API_KEY = os.getenv('CLOSEAI_API_KEY')
+CLOSEAI_BASE_URL = os.getenv('CLOSEAI_BASE_URL')
+MODEL_NAME = os.getenv('MODEL_NAME')

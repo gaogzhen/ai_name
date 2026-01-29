@@ -211,3 +211,6 @@ Temporary Items
 
 .vscode
 .idea
+
+# project setting
+settings/

@@ -1,10 +1,8 @@
-from pydantic import EmailStr
+from datetime import datetime, timedelta
+from sqlalchemy import select, exists
 
 from models import AsyncSession
 from models.user import User, EmailCode
-from sqlalchemy import select, update, delete, exists
-from datetime import datetime, timedelta
-
 from schemas.user import UserCreateSchema
 
 

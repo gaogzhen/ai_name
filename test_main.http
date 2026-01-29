@@ -35,3 +35,16 @@ Content-Type: application/json
     "email": "806797785@qq.com",
     "password": "123456"
 }
+
+### 用户ai取名
+
+POST http://127.0.0.1:8000/name
+Content-Type: application/json
+
+{
+  "surname": "高",
+  "length": "双字",
+  "gender": "女",
+  "other": "要尽量大气一点，好听一点"
+}
+
